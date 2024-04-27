@@ -106,7 +106,7 @@ class MainController extends Controller
     // fasilitas layanan
     public function fasilitasLayanan()
     {
-        return view('layanan/fasilitasLayanan', [
+        return view('layanan/fasilitaslayanan', [
             'tittle' => 'Layanan',
             'fasilitas' => Fasilitas_Layanan::latest()->filter(request(['search']))->paginate(6),
             'lyn' => Layanan_poliklinik::paginate(5)

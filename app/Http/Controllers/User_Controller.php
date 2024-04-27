@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\File;
 class User_Controller extends Controller
 {
 
+
     //  kelola User
     public function index()
     {
@@ -24,6 +25,15 @@ class User_Controller extends Controller
         return view('adminView/userTambah', [
             'tittle' => 'Kelola User'
         ]);
+    }
+
+    public function createAdmin()
+    {
+        // Check if an admin user already exists
+        $adminExists = User::where('role', 1)->exists();
+
+        // Pass the $adminExists variable to the view
+        return view('adminView.createAdmin', ['adminExists' => $adminExists]);
     }
 
     public function blog()

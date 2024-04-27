@@ -67,7 +67,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'auth']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-
+Route::get('/create-admin', [User_Controller::class, 'createAdmin'])->name('create.admin');
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth');
 
 // Blog
