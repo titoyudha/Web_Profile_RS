@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', true),
+    'debug' => (bool) env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -207,10 +207,5 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
-    'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
-    ])->toArray(),
 
 ];
